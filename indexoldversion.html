@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>News Today</title>
+    <!-- plugin css for this page -->
+    <link
+      rel="stylesheet"
+      href="./assets/vendors/mdi/css/materialdesignicons.min.css"/>
+    <link rel="stylesheet" href="assets/vendors/aos/dist/aos.css/aos.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets\images\favicon-32x32.png?">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href=assets/css/addedstyle.css>
+    <!-- endinject -->
+  </head>
+
+
+
+  <body>
+
+<!-- javascript code -->
+    <script src="./assets/js/addedjs.js"></script>
+
+
+    <div class="container-scroller">
+      <div class="main-panel">
+        <!-- partial:partials/_navbar.html -->
+        <header id="header">
+          <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <div class="navbar-top">
+                <!-- <div class="d-flex justify-content-between align-items-center"> -->
+                  <ul class="navbar-top-left-menu">
+
+
+                  </ul>
+                <!-- </div> -->
+              </div>
+              <div class="navbar-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <h4> NEWSTODAY </h4>
+                  </div>
+                  <div>
+                    <button
+                      class="navbar-toggler"
+                      type="button"
+                      data-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                      class="navbar-collapse justify-content-center collapse"
+                      id="navbarSupportedContent"
+                    >
+                      <ul
+                        class="navbar-nav d-lg-flex justify-content-between align-items-center"
+                      >
+                        <li>
+                          <button class="navbar-close">
+                            <i class="mdi mdi-close"></i>
+                          </button>
+                        </li>
+                        <li class="nav-item active">
+                          <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="pages\aboutus.html">About</a>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+
+
+
+<!-- search box -->
+        <div class="flash-news-banner">
+          <div class="container">
+            <center>  <input type="text" placeholder="Search News..." id="myInput" style="background-color: white; border-color: black; border-width:thin;float: right"> </center>
+
+
+<!-- search button -->
+     <button class="btn btn-success" type="button" id="search" onclick="getInputValue(); scrollwindow();">Search</button>
+
+
+<div id="help">
+
+  <a href= "pages\help.html" target="_blank"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-question-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033a.237.237 0 0 1-.24-.247C5.35 4.091 6.737 3.5 8.005 3.5c1.396 0 2.672.73 2.672 2.24 0 1.08-.635 1.594-1.244 2.057-.737.559-1.01.768-1.01 1.486v.105a.25.25 0 0 1-.25.25h-.81a.25.25 0 0 1-.25-.246l-.004-.217c-.038-.927.495-1.498 1.168-1.987.59-.444.965-.736.965-1.371 0-.825-.628-1.168-1.314-1.168-.803 0-1.253.478-1.342 1.134-.018.137-.128.25-.266.25h-.825zm2.325 6.443c-.584 0-1.009-.394-1.009-.927 0-.552.425-.94 1.01-.94.609 0 1.028.388 1.028.94 0 .533-.42.927-1.029.927z"/></a>
+</svg>
+
+</div>
+
+
+    </head>
+
+    <body>
+
+
+
+<!-- category selection -->
+    <button type="button" class="collapsible">Choose News Category</button>
+    <div class="content">
+      <input type="checkbox" id="category1" name="topic" value="Entertainment">
+      <label for="category1">Entertainment</label><br>
+      <input type="checkbox" id="category2" name="topic" value="Technology">
+      <label for="category2"> Technology</label><br>
+      <input type="checkbox" id="category3" name="topic" value="Sports">
+      <label for="category3">Sports</label><br><br>
+
+
+
+    </div>
+
+
+<!-- code for collapsible for category selection -->
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var indexforcollapsible;
+
+    for (indexforcollapsible = 0; indexforcollapsible < coll.length; indexforcollapsible++) {
+      coll[indexforcollapsible].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+  <div class="d-lg-flex align-items-center justify-content-between">
+  <div class="d-flex align-items-center">
+  <span class="badge badge-dark mr-3"></span>
+
+
+
+</div>
+
+
+
+
+
+
+
+              </div>
+              <div class="d-flex">
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="container">
+            <div class="row" data-aos="fade-up">
+              <div class="col-xl-8 stretch-card grid-margin">
+                <div class="position-relative">
+                  <img
+                    src="https://joebalestrino.com/wp-content/uploads/2019/02/Marketplace-Lending-News.jpg"
+                    alt="banner"
+                    class="img-fluid"
+                  />
+                  <div class="banner-content">
+
+                    <h1 class="mb-0"></h1>
+                    <h1 class="mb-2">
+
+                    </h1>
+                    <div class="fs-12">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- latestnews scroll -->
+              <div class="col-xl-4 stretch-card grid-margin">
+                <div class="card bg-dark text-white">
+                  <div class="card-body">
+                    <h2>Latest news</h2>
+                    <div id="latestnews">
+                      <button id="btn" onclick="loadlatestnews()">
+                        <script type="text/javascript">
+                        document.getElementById("btn").click();
+                        </script>
+                    </div>
+
+
+
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- category general news selection -->
+            <div class="row" data-aos="fade-up">
+              <div class="col-lg-3 stretch-card grid-margin">
+                <div class="card">
+                  <div class="card-body">
+                    <h2>Category</h2>
+                    <ul class="vertical-menu">
+                      <li><a href="#E" onclick="scrollwindowlink();loadlinknews('Entertainment');">Entertainment</a></li>
+                      <li><a href="#T" onclick="scrollwindowlink();loadlinknews('Technology');">Technology</a></li>
+                      <li><a href="#S" onclick="scrollwindowlink();loadlinknews('Sports')">Sports</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+<!-- top headlines on load of page -->
+              <div class="col-lg-9 stretch-card grid-margin">
+                <div class="card w-300">
+                  <div class="card-body">
+                    <div id="home">
+                    <center>  <h1>TOP HEADLINES</h1> </center>
+                      <button id="btn1" onclick="loadhomenews('Technology'), loadhomenews('Sports'), loadhomenews('Entertainment')"></button>
+
+                        <script>
+                        document.getElementById("btn1").click();
+                        </script>
+
+
+
+
+
+                    </div>
+
+
+                        <div id="test">
+
+
+
+
+
+
+<!-- next and previous page items -->
+      </div>
+      <div id="pages">
+        <nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <div id="previouslink">
+    <li class="page-item"><a class="page-link" onclick="scrollwindowlink();previouspage()" href="#b">Previous</a></li>
+  </div>
+  <div id="nextlink">
+    <li class="page-item"><a class="page-link" onclick= "scrollwindowlink();nextpage();"href="#a">Next</a></li>
+  </div>
+  </ul>
+</nav>
+      </div>
+      <div id="pagenumber">
+
+      </div>
+
+<!-- comment -->
+<!-- comment2 -->
+                        </div>
+
+
+                    </div>
+
+
+
+
+                          <div class="badge-positioned">
+
+                          </div>
+                        </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" data-aos="fade-up">
+              <div class="col-sm-12 grid-margin">
+
+              </div>
+            </div>
+
+<!-- footer -->
+
+        <footer>
+          <div class="footer-top">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-5">
+                  <h4> NEWSTODAY </h4>
+                  <h5 class="font-weight-normal mt-4 mb-5">
+
+                  </h5>
+
+                </div>
+                <div class="col-sm-4">
+                  <h3 class="font-weight-bold mb-3">INFORMATION</h3>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="footer-border-bottom pb-2">
+                        <div class="row">
+                          <div class="col-3">
+
+                          </div>
+                          <div class="col-9">
+                            <h5 class="font-weight-600">
+                              <div id="footerlink1">
+                              <a href="index.html"style="color:white">Home</a>
+                            </div>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="footer-border-bottom pb-2 pt-2">
+                        <div class="row">
+                          <div class="col-3">
+
+                          </div>
+                          <div class="col-9">
+                            <h5 class="font-weight-600">
+                              <div id="footerlink2">
+                              <a href="pages\aboutus.html"style="color:white">About</a>
+                            </div>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div>
+                        <div class="row">
+                          <div class="col-3">
+
+                          </div>
+                          <div class="col-9">
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </footer>
+
+
+      </div>
+    </div>
+    <!-- javascript code -->
+
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+
+    <script src="assets/vendors/aos/dist/aos.js/aos.js"></script>
+
+    <script src="./assets/js/demo.js"></script>
+    <script src="./assets/js/jquery.easeScroll.js"></script>
+    <script src="./assets/js/addedjs.js"></script>
+
+
+  </body>
+</html>

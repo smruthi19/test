@@ -1,0 +1,106 @@
+
+
+  input {
+  border: 5px solid transparent;
+  background-color: #f1f1f1;
+  padding: 12px 20px 12px 40px;
+  font-size: 16px;
+
+
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 62%;
+  padding-right: 100px;
+  position:relative;
+  right:51px;
+}
+
+
+#category1{
+  margin:20px;
+}
+#category2{
+  margin:20px;
+}
+#category3{
+  margin:20px;
+}
+
+#latestnews{
+  width:300px;
+  height:400px;
+  overflow:scroll;
+  overflow-x: hidden;
+}
+#btn{
+  color:black;
+  display:none;
+}
+
+#btn1{
+  display:none;
+}
+
+.flash-news-banner{
+  height:100px;
+}
+#footerlink1{
+  margin-left:-95px;
+}
+#footerlink2{
+  margin-left:-95px;
+}
+#pages{
+  display:none;
+}
+.collapsible {
+
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 39%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-top: 20px;
+  position:relative;
+  right:128px;
+  bottom:70px;
+  border-width:thin;
+  border-style:solid;
+
+
+
+}
+
+.active, .collapsible:hover {
+  background-color: none;
+}
+
+.content {
+  padding: 0 18px;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  width: 431px;
+  position:relative;
+  right:128px;
+  bottom:70px;
+  border-style:groove;
+  z-index:2
+}
+
+
+.stretch-card .card{
+  height:100%;
+  width:100%;
+}
+#previouslink{
+  display:none;
+}
+
+#nextlink{
+  display:none;
+}
